@@ -9,7 +9,7 @@ namespace Persistence
     public class BlogDbContext : DbContext
     {
         public DbSet<Post> Post { get; set; }
-        public DbSet<DictType> DictType{get;set;}
+        public DbSet<comment> DictType{get;set;}
         public DbSet<DictTag> DictTag{get;set;}
 
      

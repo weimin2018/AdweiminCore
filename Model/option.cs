@@ -8,11 +8,12 @@ namespace Model
     public class option
     {
         [DisplayName("配置名称")]
-        [Column("name")]
+        [Key,Column("name")]
         public string name { get; set; }
 
         [DisplayName("配置所属用户")]
         [Column("user")]
+        [ForeignKey("user")]
         public int user { get; set; }
 
         [DisplayName("配置值")]

@@ -11,8 +11,13 @@ namespace Model
         [Column("cid")]
         public int cid { get; set; }
 
+        public content content { get; set; }
+
         [DisplayName("项目主键")]
         [Column("mid")]
         public int mid { get; set; }
+
+        public meta meta { get; set; }
+
     }
 }

@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="Model">
+      <HintPath>..\Model\bin\Debug\netcoreapp2.1\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Persistence">
+      <HintPath>..\Persistence\bin\Debug\netcoreapp2.1\Persistence.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

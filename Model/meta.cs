@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -34,6 +35,9 @@ namespace Model
         [DisplayName("项目排序")]
         [Column("order")]
         public int order { get; set; }
+
+
+        public ICollection<relationship> relationship { get; set; }
 
 
     }

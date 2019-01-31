@@ -8,12 +8,13 @@ namespace Model
     public class comment
     {
         [DisplayName("comment表主键")]
-        [Column("coid")]
+        [Key,Column("coid")]
         public int coid { get; set; }
 
 
         [DisplayName("post表主键")]
         [Column("cid")]
+        [ForeignKey("content")]
         public int cid { get; set; }
 
 
@@ -22,7 +23,7 @@ namespace Model
         public int created { get; set; }
 
         [DisplayName("评论作者")]
-        [Column("created")]
+        [Column("author")]
         public string author { get; set; }
 
 

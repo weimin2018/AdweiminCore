@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -70,6 +71,8 @@ namespace Model
         [DisplayName("允许出现在聚合中")]
         [Column("allowFeed")]
         public char allowFeed { get; set; }
+
+        public ICollection<relationship> relationship { get; set; }
 
     }
 }

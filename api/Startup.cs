@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence;
+using Service;
 
 namespace api
 {
@@ -22,6 +23,8 @@ namespace api
         {
             var connection = Configuration.GetConnectionString("Dev");
             services.AddDbContext<BlogDbContext>(options => options.UseSqlServer(connection));
+            services.AddTransient<IBlogContentService, BlogContentService>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

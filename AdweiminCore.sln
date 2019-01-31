@@ -4,12 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{887C782B-3881-45F3-AC9D-62F09F21B891}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FEA27C09-4BFF-47DB-B0FC-5522B819991B} = {FEA27C09-4BFF-47DB-B0FC-5522B819991B}
+		{29ED0FF7-C4D6-4F36-8220-C417408B26D8} = {29ED0FF7-C4D6-4F36-8220-C417408B26D8}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{FEA27C09-4BFF-47DB-B0FC-5522B819991B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{29ED0FF7-C4D6-4F36-8220-C417408B26D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "api\api.csproj", "{FABBE267-605F-4754-B665-2275D093D2A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "api\api.csproj", "{FABBE267-605F-4754-B665-2275D093D2A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

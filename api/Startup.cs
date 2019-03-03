@@ -24,6 +24,11 @@ namespace api
             var connection = Configuration.GetConnectionString("Dev");
             services.AddDbContext<BlogDbContext>(options => options.UseSqlServer(connection));
             services.AddTransient<IBlogContentService, BlogContentService>();
+            //注册Swagger生成器，定义一个和多个Swagger 文档
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "AdweiminCore API", Version = "v1" });
+            });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -40,7 +45,13 @@ namespace api
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            //启用中间件服务生成Swagger作为JSON终结点
+            app.UseSwagger();
+            //启用中间件服务对swagger-ui，指定Swagger JSON终结点
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "AdweiminCore API V1");
+            });
             app.UseHttpsRedirection();
             app.UseMvc();
         }

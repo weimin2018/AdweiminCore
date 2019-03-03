@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Model;
 using Service;
-using System.Collections.Generic;
 
 namespace api.Controllers
 {

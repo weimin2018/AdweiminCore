@@ -4,6 +4,9 @@ using Service;
 
 namespace api.Controllers
 {
+    /// <summary>
+    /// 内容表 
+    /// </summary>
     [Route("[controller]")]
     public class ContentsController : ControllerBase
     {

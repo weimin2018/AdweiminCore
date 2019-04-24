@@ -4,5 +4,10 @@
         <name>api</name>
     </assembly>
     <members>
+        <member name="T:api.Controllers.ContentsController">
+            <summary>
+            内容表 
+            </summary>
+        </member>
     </members>
 </doc>

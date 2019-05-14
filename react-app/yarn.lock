@@ -10,18 +10,18 @@
     gud "^1.0.0"
     warning "^4.0.3"
 
-"@ant-design/icons-react@~1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npm.taobao.org/@ant-design/icons-react/download/@ant-design/icons-react-1.1.5.tgz#1b03da8dcced2a4bb982ef7b25c1d24014c35a68"
-  integrity sha1-GwPajcztKku5gu97JcHSQBTDWmg=
+"@ant-design/icons-react@~2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/@ant-design/icons-react/download/@ant-design/icons-react-2.0.0.tgz#2f28d91bbc440af79e43cea0a86b29940e11e506"
+  integrity sha1-LyjZG7xECveeQ86gqGsplA4R5QY=
   dependencies:
     ant-design-palettes "^1.1.3"
     babel-runtime "^6.26.0"
 
-"@ant-design/icons@~1.2.0":
-  version "1.2.1"
-  resolved "https://registry.npm.taobao.org/@ant-design/icons/download/@ant-design/icons-1.2.1.tgz#8e19301b1433ec67d6bbd0e892782e2ade561ff9"
-  integrity sha1-jhkwGxQz7GfWu9DoknguKt5WH/k=
+"@ant-design/icons@~2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/@ant-design/icons/download/@ant-design/icons-2.0.0.tgz#f9b8b16e188ec71ed40a24a0037f1a26d8c2be59"
+  integrity sha1-+bixbhiOxx7UCiSgA38aJtjCvlk=
 
 "@babel/code-frame@7.0.0", "@babel/code-frame@^7.0.0":
   version "7.0.0"
@@ -1254,14 +1254,6 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/hoist-non-react-statics@^3.3.1":
-  version "3.3.1"
-  resolved "https://registry.npm.taobao.org/@types/hoist-non-react-statics/download/@types/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
-  integrity sha1-ESSq/lEYy1kZd66xzqrtEHDrA58=
-  dependencies:
-    "@types/react" "*"
-    hoist-non-react-statics "^3.3.0"
-
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/@types/istanbul-lib-coverage/download/@types/istanbul-lib-coverage-2.0.1.tgz#42995b446db9a48a11a07ec083499a860e9138ff"
@@ -1669,15 +1661,14 @@ ant-design-palettes@^1.1.3:
   dependencies:
     tinycolor2 "^1.4.1"
 
-antd@^3.17.0:
-  version "3.17.0"
-  resolved "https://registry.npm.taobao.org/antd/download/antd-3.17.0.tgz#d7eabadc3ffb499f9393fd865ac9a54d9b4345de"
-  integrity sha1-1+q63D/7SZ+Tk/2GWsmlTZtDRd4=
+antd@^3.18.0:
+  version "3.18.1"
+  resolved "https://registry.npm.taobao.org/antd/download/antd-3.18.1.tgz#14c8a4c506427cff3c1b3b5ece6ee7f1e83cea42"
+  integrity sha1-FMikxQZCfP88Gztezm7n8eg86kI=
   dependencies:
     "@ant-design/create-react-context" "^0.2.4"
-    "@ant-design/icons" "~1.2.0"
-    "@ant-design/icons-react" "~1.1.5"
-    "@types/hoist-non-react-statics" "^3.3.1"
+    "@ant-design/icons" "~2.0.0"
+    "@ant-design/icons-react" "~2.0.0"
     "@types/react-slick" "^0.23.3"
     array-tree-filter "^2.1.0"
     babel-runtime "6.x"
@@ -1696,7 +1687,7 @@ antd@^3.17.0:
     rc-cascader "~0.17.0"
     rc-checkbox "~2.1.5"
     rc-collapse "~1.11.1"
-    rc-dialog "~7.3.0"
+    rc-dialog "~7.4.0"
     rc-drawer "~1.8.0"
     rc-dropdown "~2.4.1"
     rc-editor-mention "^1.1.7"
@@ -1704,7 +1695,7 @@ antd@^3.17.0:
     rc-input-number "~4.4.0"
     rc-menu "~7.4.12"
     rc-notification "~3.3.0"
-    rc-pagination "~1.17.7"
+    rc-pagination "~1.18.0"
     rc-progress "~2.3.0"
     rc-rate "~2.5.0"
     rc-select "~9.1.0"
@@ -2628,6 +2619,11 @@ clone-deep@^2.0.1:
     is-plain-object "^2.0.4"
     kind-of "^6.0.0"
     shallow-clone "^1.0.0"
+
+clone@^2.1.1, clone@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npm.taobao.org/clone/download/clone-2.1.2.tgz#1b7f4b9f591f1e8f83670401600345a02887435f"
+  integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
 
 co@^4.6.0:
   version "4.6.0"
@@ -3667,7 +3663,7 @@ entities@^1.1.1:
   resolved "https://registry.npm.taobao.org/entities/download/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
   integrity sha1-vfpzUplmTfr9NFKe1PhSKidf6lY=
 
-errno@^0.1.3, errno@~0.1.7:
+errno@^0.1.1, errno@^0.1.3, errno@~0.1.7:
   version "0.1.7"
   resolved "https://registry.npm.taobao.org/errno/download/errno-0.1.7.tgz#4684d71779ad39af177e3f007996f7c67c852618"
   integrity sha1-RoTXF3mtOa8Xfj8AeZb3xnyFJhg=
@@ -4925,6 +4921,11 @@ ignore@^4.0.6:
   resolved "https://registry.npm.taobao.org/ignore/download/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
   integrity sha1-dQ49tYYgh7RzfrrIIH/9HvJ7Jfw=
 
+image-size@~0.5.0:
+  version "0.5.5"
+  resolved "https://registry.npm.taobao.org/image-size/download/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
+  integrity sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=
+
 immer@1.10.0:
   version "1.10.0"
   resolved "https://registry.npm.taobao.org/immer/download/immer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"
@@ -6082,6 +6083,31 @@ left-pad@^1.3.0:
   resolved "https://registry.npm.taobao.org/left-pad/download/left-pad-1.3.0.tgz#5b8a3a7765dfe001261dde915589e782f8c94d1e"
   integrity sha1-W4o6d2Xf4AEmHd6RVYnngvjJTR4=
 
+less-loader@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npm.taobao.org/less-loader/download/less-loader-5.0.0.tgz#498dde3a6c6c4f887458ee9ed3f086a12ad1b466"
+  integrity sha1-SY3eOmxsT4h0WO6e0/CGoSrRtGY=
+  dependencies:
+    clone "^2.1.1"
+    loader-utils "^1.1.0"
+    pify "^4.0.1"
+
+less@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.npm.taobao.org/less/download/less-3.9.0.tgz#b7511c43f37cf57dc87dffd9883ec121289b1474"
+  integrity sha1-t1EcQ/N89X3Iff/ZiD7BISibFHQ=
+  dependencies:
+    clone "^2.1.2"
+  optionalDependencies:
+    errno "^0.1.1"
+    graceful-fs "^4.1.2"
+    image-size "~0.5.0"
+    mime "^1.4.1"
+    mkdirp "^0.5.0"
+    promise "^7.1.1"
+    request "^2.83.0"
+    source-map "~0.6.0"
+
 leven@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/leven/download/leven-2.1.0.tgz#c2e7a9f772094dee9d34202ae8acce4687875580"
@@ -6415,6 +6441,11 @@ mime@1.4.1:
   version "1.4.1"
   resolved "https://registry.npm.taobao.org/mime/download/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
   integrity sha1-Eh+evEnjdm8xGnbh+hyAA8SwOqY=
+
+mime@^1.4.1:
+  version "1.6.0"
+  resolved "https://registry.npm.taobao.org/mime/download/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
+  integrity sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=
 
 mime@^2.0.3, mime@^2.3.1:
   version "2.4.2"
@@ -8285,10 +8316,10 @@ rc-collapse@~1.11.1:
     react-is "^16.7.0"
     shallowequal "^1.1.0"
 
-rc-dialog@~7.3.0:
-  version "7.3.1"
-  resolved "https://registry.npm.taobao.org/rc-dialog/download/rc-dialog-7.3.1.tgz#45041ec35bfc8e337c91b64b52cebef6ea5cd4a2"
-  integrity sha1-RQQew1v8jjN8kbZLUs6+9upc1KI=
+rc-dialog@~7.4.0:
+  version "7.4.0"
+  resolved "https://registry.npm.taobao.org/rc-dialog/download/rc-dialog-7.4.0.tgz#640551235b1f886c7f9a01ce75f87102a70ae1d4"
+  integrity sha1-ZAVRI1sfiGx/mgHOdfhxAqcK4dQ=
   dependencies:
     babel-runtime "6.x"
     rc-animate "2.x"
@@ -8403,12 +8434,13 @@ rc-notification@~3.3.0:
     rc-animate "2.x"
     rc-util "^4.0.4"
 
-rc-pagination@~1.17.7:
-  version "1.17.14"
-  resolved "https://registry.npm.taobao.org/rc-pagination/download/rc-pagination-1.17.14.tgz#ffb2882fd89d95b3b603938dc5db2fb2c30026d3"
-  integrity sha1-/7KIL9idlbO2A5ONxdsvssMAJtM=
+rc-pagination@~1.18.0:
+  version "1.18.0"
+  resolved "https://registry.npm.taobao.org/rc-pagination/download/rc-pagination-1.18.0.tgz#004a7d381f0e03dc025f96929de3657094496525"
+  integrity sha1-AEp9OB8OA9wCX5aSneNlcJRJZSU=
   dependencies:
     babel-runtime "6.x"
+    classnames "^2.2.6"
     prop-types "^15.5.7"
     react-lifecycles-compat "^3.0.4"
 
@@ -9006,7 +9038,7 @@ request-promise-native@^1.0.5:
     stealthy-require "^1.1.1"
     tough-cookie "^2.3.3"
 
-request@^2.87.0, request@^2.88.0:
+request@^2.83.0, request@^2.87.0, request@^2.88.0:
   version "2.88.0"
   resolved "https://registry.npm.taobao.org/request/download/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   integrity sha1-nC/KT301tZLv5Xx/ClXoEFIST+8=

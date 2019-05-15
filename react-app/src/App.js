@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu } from 'antd';
+import Home from './Home';
 import './App.css';
 
-const { Header, Footer, Content } = Layout;
+const { Header, Footer } = Layout;
 
 class App extends Component {
   render() {
@@ -19,14 +20,7 @@ class App extends Component {
             <Menu.Item key="3">联系我们</Menu.Item>
           </Menu>
         </Header>
-        <Content style={{ padding: '0 50px' }}>
-          <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>主页</Breadcrumb.Item>
-            {/* <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item> */}
-          </Breadcrumb>
-          <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>内容</div>
-        </Content>
+        <Home />
         <Footer style={{ textAlign: 'center' }}>浪民 ©2019 </Footer>
       </Layout>
     );

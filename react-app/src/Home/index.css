@@ -1,0 +1,14 @@
+.ant-carousel .slick-slide{
+    padding: 20px;
+    height: 260px;
+    background: #364d79;
+}
+   .slick-slide[data-index|="1"]{
+    background: #1DA57A;/* 1DA57A */
+  }
+  .slick-slide[data-index|="2"]{
+    background: #1DA57A;
+  }
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
+  }

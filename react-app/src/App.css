@@ -1,7 +1,22 @@
+.logo {
+  width: 150px;
+  height: 50px;
+  margin: -5px 24px 5px 0;
+  float: left;
+}
+
 .link-inline{
   display: inline-block !important;
 }
 
+.logo-text strong{
+  padding-left: 15px;
+  font-size: 18px;
+}
+
+.theme-switch{
+  float: right;
+}
 
 /* .App {
   text-align: center;

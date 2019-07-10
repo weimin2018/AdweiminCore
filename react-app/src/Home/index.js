@@ -26,7 +26,7 @@ class Home extends Component {
         );
 
         return (
-            <Content style={{ padding: '0px 50px',marginTop:52, }}>
+            <Content className="container" >
                  <Breadcrumb style={{ margin: '16px 0' }}>
                     <Breadcrumb.Item>首页</Breadcrumb.Item>
                     {/* <Breadcrumb.Item>List</Breadcrumb.Item>

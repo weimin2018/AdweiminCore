@@ -14,7 +14,7 @@ class Explore extends Component {
         const { Content } = Layout;
         const { Meta } = Card;
         return (
-            <Content style={{ padding: '0 50px',minHeight: 280,marginTop:80 }}>
+            <Content className="container">
                 <Row gutter={16}>
                     <Col span={8}>
                         <Card hoverable  style={{ width: 240 }}

@@ -12,7 +12,7 @@ class App extends Component {
     theme: 'dark',
     current: '1',
   };
-  
+
   changeTheme = value => {
     this.setState({
       theme: value ? 'dark' : 'light',
@@ -28,7 +28,7 @@ class App extends Component {
 
   render() {
     const { Header, Footer } = Layout;
-    const { Title,Text } = Typography;
+    const { Text } = Typography;
     const bgColor=this.state.theme ==='dark'?'#001529':'#fff';
     // const breadcrumbNameMap = {
     //   '/apps': 'Application List',
@@ -66,7 +66,7 @@ class App extends Component {
                 </Header>                
                 <Route exact path="/" component={Home} />
                 <Route path="/explore" component={Explore} />
-                <Footer style={{ textAlign: 'center' ,backgroundColor:bgColor}}>
+                <Footer className="footer" style={{backgroundColor:bgColor}}>
                   <Divider><Text >浪民 ©2019</Text></Divider>
                 </Footer>
             </Layout>

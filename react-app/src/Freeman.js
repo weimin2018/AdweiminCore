@@ -38,19 +38,21 @@ class FreeMan extends Component {
                     <Router>
                         <Layout className="layout">
                             <Header style={{ position: 'fixed', zIndex: 1, width: '100%', height: '52px', backgroundColor: bgColor }} theme={this.state.theme}>
+                                {/* <div className="switch">
+                                    <Switch checked={this.state.theme === 'dark'} onChange={this.changeTheme} checkedChildren="暗" unCheckedChildren="明" />
+                                </div> */}
                                 <div className="logo">
                                     <Avatar size={40} src={LogoSvg} shape="circle" alt="浪民的博客"></Avatar>
                                     <Text strong={true} className="logo-text">浪民的博客</Text>
                                 </div>
                                 <Menu mode="horizontal" theme={this.state.theme} defaultSelectedKeys={['1']} style={{ lineHeight: '52px' }} >
                                     <Menu.Item key="1">
-                                        {/* <Icon type="home" theme="filled" /> */}
                                         <Icon type="read" theme="filled" />
                                         <Link to='/Read' className="link-inline">Read</Link >
                                     </Menu.Item>
-                                    <div className="theme-switch" >
+                                    {/* <Menu.Item key="2" disabled={true} >
                                         <Switch checked={this.state.theme === 'dark'} onChange={this.changeTheme} checkedChildren="暗" unCheckedChildren="明" />
-                                    </div>
+                                    </Menu.Item> */}
                                 </Menu>
                             </Header>
                             <Route exact path="/" component={Read} />

@@ -35,7 +35,7 @@ namespace Persistence
 
 
 
-        public DbSet<comment> COMMENT { get; set; }
+        public DbSet<Comment> COMMENT { get; set; }
         public DbSet<content> CONTENT { get; set; }
         public DbSet<meta> META { get; set; }
         public DbSet<option> OPTION { get; set; }

@@ -5,67 +5,67 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Model
 {
     [Table("Comment")]
-    public class comment
+    public class Comment
     {
-        [DisplayName("comment表主键")]
-        [Key,Column("coid")]
-        public int coid { get; set; }
+        [DisplayName("Comment表主键")]
+        [Key,Column("Coid")]
+        public int Coid { get; set; }
 
 
         [DisplayName("post表主键")]
         [Column("cid")]
         [ForeignKey("content")]
-        public int cid { get; set; }
+        public int Cid { get; set; }
 
 
         [DisplayName("评论生成时时间戳")]
-        [Column("created")]
-        public int created { get; set; }
+        [Column("Created")]
+        public int Created { get; set; }
 
         [DisplayName("评论作者")]
-        [Column("author")]
-        public string author { get; set; }
+        [Column("Author")]
+        public string Author { get; set; }
 
 
         [DisplayName("评论所属用户id")]
-        [Column("authorId")]
-        public int authorId { get; set; }
+        [Column("AuthorId")]
+        public int AuthorId { get; set; }
 
         [DisplayName("评论所属内容作者id")]
-        [Column("ownerId")]
-        public int ownerId { get; set; }
+        [Column("OwnerId")]
+        public int OwnerId { get; set; }
 
         [DisplayName("评论者邮件")]
-        [Column("mail")]
-        public string mail { get; set; }
+        [Column("Mail")]
+        public string Mail { get; set; }
 
         [DisplayName("评论者网址")]
-        [Column("url")]
-        public string url { get; set; }
+        [Column("Url")]
+        public string Url { get; set; }
 
-        [DisplayName("评论者ip地址")]
-        [Column("ip")]
-        public string ip { get; set; }
+        [DisplayName("评论者IP地址")]
+        [Column("IP")]
+        public string IP { get; set; }
 
         [DisplayName("评论者客户端")]
-        [Column("agent")]
-        public string agent { get; set; }
+        [Column("Agent")]
+        public string Agent { get; set; }
 
         [DisplayName("评论文字")]
-        [Column("text", TypeName = "text")]
-        public string text { get; set; }
+        [Column("Text", TypeName = "text")]
+        public string Text { get; set; }
 
         [DisplayName("评论类型")]
-        [Column("type")]
-        public string type { get; set; }
+        [Column("Type")]
+        public string Type { get; set; }
 
 
         [DisplayName("评论状态")]
-        [Column("status")]
-        public string status { get; set; }
+        [Column("Status")]
+        public string Status { get; set; }
 
-        [DisplayName("评论状态")]
-        [Column("parent")]
-        public int parent { get; set; }
+        [DisplayName("父级评论")]
+        [Column("Parent")]
+        public int Parent { get; set; }
     }
 }

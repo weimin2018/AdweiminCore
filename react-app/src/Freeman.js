@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { ConfigProvider, Layout, Menu, Icon, Avatar, Typography, Divider, Button } from 'antd';
-import Read from './Read';
+import Blog from './Blog';
+import Explore from './Explore';
 import LogoSvg from './img/logo.svg';
 import './App.css';
 
@@ -23,12 +24,19 @@ function FreeMan() {
                         <Menu mode="horizontal" theme={"dark"} defaultSelectedKeys={['1']} style={{ lineHeight: '52px' }} >
                             <Menu.Item key="1">
                                 <Icon type="read" theme="filled" />
-                                <Link to='/Read' className="link-inline">Read</Link >
+                                <Link to='/blog' className="link-inline">博客</Link >
+                                {/* <Link to='/Apps' className="link-inline">博客</Link > */}
                             </Menu.Item>
+                            <Menu.Item key="2">
+                                <Icon type="appstore" theme="filled" />
+                                <Link to='/explore' className="link-inline">探索</Link >
+                            </Menu.Item>
+
                         </Menu>
                     </Header>
-                    <Route exact path="/" component={Read} />
-                    <Route exact path="/read" component={Read} />
+                    <Route exact path="/" component={Blog} />
+                    <Route exact path="/blog" component={Blog} />
+                    <Route exact path="/explore" component={Explore} />
                     <Footer className="footer" style={{ backgroundColor: bgColor }}>
                         <Divider>
                             <Button type="link" block href={githubPage} target="_blank">

@@ -4,8 +4,47 @@ import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { ConfigProvider, Layout, Menu, Icon, Avatar, Typography, Divider, Button } from 'antd';
 import Blog from './Blog';
 import Explore from './Explore';
+import SportsLottery from './Explore/SportsLottery';
 import LogoSvg from './img/logo.svg';
 import './App.css';
+
+function RouteWithSubRoutes(route) {
+    return (
+        <Route
+            path={route.path}
+            render={props => (
+                // pass the sub-routes down to keep nesting
+                <route.component {...props} routes={route.routes} />
+            )}
+        />
+    );
+}
+
+const routes = [
+    {
+        path: "/",
+        exact:true,
+        component: Blog 
+    },
+    {
+        path: "/blog",
+        exact:true,
+        component: Blog
+    },
+    {
+        path: "/explore",
+        exact:true,
+        component: Explore,
+        routes: [
+            {
+                exact:true,
+                path: "/explore/sportsLottery",
+                component: SportsLottery
+            },
+        ]
+    }
+];
+
 
 function FreeMan() {
     const { Header, Footer } = Layout;
@@ -25,7 +64,6 @@ function FreeMan() {
                             <Menu.Item key="1">
                                 <Icon type="read" theme="filled" />
                                 <Link to='/blog' className="link-inline">博客</Link >
-                                {/* <Link to='/Apps' className="link-inline">博客</Link > */}
                             </Menu.Item>
                             <Menu.Item key="2">
                                 <Icon type="appstore" theme="filled" />
@@ -34,9 +72,9 @@ function FreeMan() {
 
                         </Menu>
                     </Header>
-                    <Route exact path="/" component={Blog} />
-                    <Route exact path="/blog" component={Blog} />
-                    <Route exact path="/explore" component={Explore} />
+                    {routes.map((route, i) => (
+                        <RouteWithSubRoutes key={i} {...route} />
+                    ))}
                     <Footer className="footer" style={{ backgroundColor: bgColor }}>
                         <Divider>
                             <Button type="link" block href={githubPage} target="_blank">

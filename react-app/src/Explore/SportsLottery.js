@@ -2,9 +2,7 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
 
-class SportsLottery extends Component {
-
-    render() {
+function SportsLottery (){
         const { Content } = Layout;
         return (
             <Content className="container">
@@ -12,5 +10,4 @@ class SportsLottery extends Component {
             </Content>
         );
     }
-}
 export default SportsLottery;

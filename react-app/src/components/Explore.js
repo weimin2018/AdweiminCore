@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Layout, Card, Icon, Row, Col } from 'antd';
-import './index.css';
+import './Explore.css';
 
 function Explore() {
     const { Content } = Layout;

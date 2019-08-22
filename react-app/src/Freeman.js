@@ -1,80 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route,Switch } from "react-router-dom";
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { ConfigProvider, Layout, Menu, Icon, Avatar, Typography, Divider, Button } from 'antd';
-import Blog from './Blog';
-import Explore from './Explore';
-import SportsLottery from './Explore/SportsLottery';
-import LogoSvg from './img/logo.svg';
-import './App.css';
-
-function RouteWithSubRoutes(route) {
-    return (
-        <Route
-            path={route.path}
-            render={props => (
-                // pass the sub-routes down to keep nesting
-                <route.component {...props} routes={route.routes} />
-            )}
-        />
-    );
-}
-
-const routes = [
-    {
-        path: "/",
-        exact:true,
-        component: Blog 
-    },
-    {
-        path: "/blog",
-        exact:true,
-        component: Blog
-    },
-    {
-        path: "/explore",
-        exact:true,
-        component: Explore,
-        routes: [
-            {
-                exact:true,
-                path: "/explore/sportsLottery",
-                component: SportsLottery
-            },
-        ]
-    }
-];
+import Home from './components/Home';
+import Navigation from './components/Navigation';
+import Explore from './components/Explore';
+// import SportsLottery from './components/SportsLottery';
+import './Freeman.css';
 
 
 function FreeMan() {
-    const { Header, Footer } = Layout;
+    const {  Footer } = Layout;
     const { Text } = Typography;
     const bgColor = '#001529';
     const githubPage = "https://github.com/weimin2018";
     return (
         <ConfigProvider locale={zhCN}>
-            <Router>
+            <BrowserRouter>
                 <Layout className="layout">
-                    <Header style={{ position: 'fixed', zIndex: 1, width: '100%', height: '52px', backgroundColor: bgColor }} theme={"dark"}>
-                        <div className="logo">
-                            <Avatar size={40} src={LogoSvg} shape="circle" alt="浪民的博客"></Avatar>
-                            <Text strong={true} className="logo-text">浪民的博客</Text>
-                        </div>
-                        <Menu mode="horizontal" theme={"dark"} defaultSelectedKeys={['1']} style={{ lineHeight: '52px' }} >
-                            <Menu.Item key="1">
-                                <Icon type="read" theme="filled" />
-                                <Link to='/blog' className="link-inline">博客</Link >
-                            </Menu.Item>
-                            <Menu.Item key="2">
-                                <Icon type="appstore" theme="filled" />
-                                <Link to='/explore' className="link-inline">探索</Link >
-                            </Menu.Item>
-
-                        </Menu>
-                    </Header>
-                    {routes.map((route, i) => (
-                        <RouteWithSubRoutes key={i} {...route} />
-                    ))}
+                    <Navigation/>
+                    <Switch >
+                        <Route path='/' component={Home} exact/>
+                        <Route path='/explore' component={Explore}/>
+                    </Switch>
                     <Footer className="footer" style={{ backgroundColor: bgColor }}>
                         <Divider>
                             <Button type="link" block href={githubPage} target="_blank">
@@ -83,7 +31,7 @@ function FreeMan() {
                         </Divider>
                     </Footer>
                 </Layout>
-            </Router>
+            </BrowserRouter>
         </ConfigProvider>
     );
 }

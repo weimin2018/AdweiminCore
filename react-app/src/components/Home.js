@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Icon, Result } from 'antd';
 
-class Read extends Component {
+class Home extends Component {
     render() {
         const { Content } = Layout;
         return (
@@ -14,4 +14,4 @@ class Read extends Component {
         );
     }
 }
-export default Read;
+export default Home;

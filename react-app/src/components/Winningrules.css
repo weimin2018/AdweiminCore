@@ -1,0 +1,18 @@
+.circle {
+    width: 20px;
+    height: 20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 5px;
+    display: inline-block;
+}
+.red{
+    background: red;
+}
+.blue{
+    background: blue;
+}
+.grey{
+    background: grey;
+}

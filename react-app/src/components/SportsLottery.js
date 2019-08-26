@@ -1,13 +1,11 @@
+// 彩票工具
+import React from 'react';
 
-import React, { Component } from 'react';
-import { Layout } from 'antd';
-
-function SportsLottery (){
-        const { Content } = Layout;
-        return (
-            <Content className="container">
-                hello world!
-            </Content>
-        );
-    }
+const SportsLottery = () => {
+    return (
+        <div>
+            hello world!
+            </div>
+    );
+}
 export default SportsLottery;
